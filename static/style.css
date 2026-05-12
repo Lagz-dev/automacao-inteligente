@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* fundo com blur */
+.bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-image: url("https://images.unsplash.com/photo-1694903089438-bf28d4697d9a?q=80&w=1332&auto=format&fit=crop");
+    background-size: cover;
+    background-position: center;
+
+    filter: blur(5px);
+    transform: scale(1.1);
+    z-index: -1;
+}
+
+.container {
+    width: 400px;
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+input,
+textarea {
+    width: 90%;
+    margin: 10px 0;
+    padding: 10px;
+    transition: 0.3s;
+    color: white;
+    resize: none;
+}
+
+.text_block {
+    border: none;
+    color: black;
+    border-radius: 10px;
+}
+
+.text_block:hover {
+    transform: scale(1.04);
+    border: 2px solid #3b82f6;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #3b82f6;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: 0.2s;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #2563eb;
+    transform: scale(1.03);
+}
+
+#login_button {
+    margin-top: 20px;
+    background: #ef4444;
+    width: 60%;
+}
+
+#voltar_button {
+    margin-top: 20px;
+    background: #ef444d;
+    width: 60%;
+}
+
+#resposta {
+    margin-top: 15px;
+    color: #22c55e;
+}
+
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    font-size: 12px;
+}
+
+th,
+td {
+    border: 1px solid #2d3a55;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background: #1e293b;
+    color: #fff;
+}
+
+tr:nth-child(even) {
+    background: #0f172a;
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Automação de Atendimento</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <div class="bg"></div>
+
+    <div class="container">
+        <div class="card">
+            <h1>⚙️ Sistema de Automação Inteligente</h1>
+            <p class="sub">Envie uma mensagem e receba uma resposta</p>
+
+            <form id="form">
+                <input type="text"  class="text_block" name="nome" placeholder="Seu nome" required>
+                <textarea class="text_block" name="mensagem" placeholder="Digite sua mensagem..." required></textarea>
+                <button type="submit">Enviar mensagem</button>
+            </form>
+
+            <div id="resposta"></div>
+        </div>
+        <button id="login_button" type="submit" onclick="window.location.href='/login'">🔐 Login Admin</button>
+    </div>
+
+    <script>
+        document.getElementById("form").addEventListener("submit", async function (e) {
+            e.preventDefault();
+
+            let formData = new FormData(this);
+
+            let res = await fetch("/enviar", {
+                method: "POST",
+                body: formData
+            });
+
+            let data = await res.json();
+
+            document.getElementById("resposta").innerText =
+                 data.resposta;
+        });
+    </script>
+
+</body>
+
+</html>
