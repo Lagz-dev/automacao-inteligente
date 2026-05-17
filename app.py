@@ -4,7 +4,7 @@ from datetime import datetime
 
 secret_key = "chave_super_secreta_123" #"super secreta"... Está aqui pois é para vc utilizar ela no site. 
 
-USUARIO = "admin"
+USUARIO = "Admin"
 SENHA = "1234"
 
 app = Flask(__name__)
