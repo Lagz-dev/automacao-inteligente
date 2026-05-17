@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, jsonify, session, redirect, u
 import sqlite3
 from datetime import datetime
 
-secret_key = "chave_super_secreta_123"
+secret_key = "chave_super_secreta_123" #"super secreta"... Está aqui pois é para vc utilizar ela no site. 
 
 USUARIO = "admin"
 SENHA = "1234"
